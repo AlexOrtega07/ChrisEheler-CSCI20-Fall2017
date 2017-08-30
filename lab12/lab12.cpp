@@ -13,7 +13,7 @@
      cout<<" ( (  .-'-.  A.-.A              "<<endl;
      cout<<"  \\ \\/     \\/ , , \\         "<<endl;
      cout<<"   \\ \\    = ;  t  /=          "<<endl;
-     cout<<"    \\   |''-  ',--'            "<<endl;
+     cout<<"    \\  | ''- ',--'            "<<endl;
      cout<<"     / //  | ||                 "<<endl;
      cout<<"    /_,))  |_,))                "<<endl; // This is my cat George.
      
