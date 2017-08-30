@@ -15,7 +15,7 @@
      cout<<"   \\ \\    = ;  t  /=          "<<endl;
      cout<<"    \\   |''-  ',--'            "<<endl;
      cout<<"     / //  | ||                 "<<endl;
-     cout<<"    /_,))  |_,))                "<<endl;
+     cout<<"    /_,))  |_,))                "<<endl; // This is my cat George.
      
  }                                      
  
