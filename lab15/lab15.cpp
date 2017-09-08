@@ -8,13 +8,13 @@
  using namespace std;                    
 
  int main()                             
- {      string adjective1;                                                                                      //Initialize all of the input required for the mad lib
-        string adjective2;
-        string noun1;
-        string noun2;
-        string noun3;
-        string adjective3;
-        string verb1;
+ {      string adjective1 = "red";                                                                                      //Initialize all of the input required for the mad lib
+        string adjective2 = "blue";
+        string noun1 = "ranch";
+        string noun2 = "cheese";
+        string noun3 = "pizza";
+        string adjective3 = "tasty";
+        string verb1 = "eat";
         
         cout << "We are going to play a mad lib game!" << endl;                                                 //Tell the user what to expect from the program
         cout << "When asked for a word do not use spaces" << endl;                                              //Make sure the user doesnt cause an error
