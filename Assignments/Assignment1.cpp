@@ -38,7 +38,7 @@
    
    cout << "Please enter your first name followed by your last: " << endl;                     // Gathering all of my input from the user
    getline(cin, userA.user_name);
-   cout << "How many hours a week do you work a week ?" << endl;
+   cout << "How many hours do you work a week ?" << endl;
    cin >> userA.hours_worked;
    cout << "How much money do you recieve per hour ?" <<endl;
    cin >> userA.hourly_pay;
@@ -90,4 +90,9 @@ Process exited with code: 0
 
 ---------------------------------------------------------------------------------------------------------------------
 
+Eddy Hall
+Income          Rate          Hours         Gross Total         Deductions         Reimbursements          Total Pay
+Gross Wages     $8.25          40              $330              $205.724              $79.45          $203.726
+
+Process exited with code: 0
 */
