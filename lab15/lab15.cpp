@@ -8,7 +8,7 @@
  using namespace std;                    
 
  int main()                             
- {      string adjective1 = "red";                                                                                      //Initialize all of the input required for the mad lib
+ {      string adjective1 = "red";                                                                             //Initialize all of the input required for the mad lib
         string adjective2 = "blue";
         string noun1 = "ranch";
         string noun2 = "cheese";

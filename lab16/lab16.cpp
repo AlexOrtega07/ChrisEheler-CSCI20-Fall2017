@@ -1,6 +1,6 @@
 //Created By: Chris Eheler
 //Created On: 9/12/2017
-//This program is designed to take user input and creat a stock portfolio
+//This program is designed to take user input and create a stock portfolio
  
  #include <iostream>
  #include <string>
