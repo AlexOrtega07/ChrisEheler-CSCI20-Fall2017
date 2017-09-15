@@ -56,11 +56,13 @@
    userA.taxes = (userA.gross_pay - userA.insurance_cost) * .17;
    userA.net_pay = (userA.gross_pay - userA.taxes - userA.insurance_cost) + userA.mileage_reimbursment;
    
+   cout << " " << endl;                                                                      // Creating a space for aesthetics
    cout << " " << endl;
    cout << " " << endl;
-   cout << " " << endl;
-   cout << userA.user_name << endl;
-   cout << "Income          Rate          Hours         Gross Total         Deductions         Reimbursements          Total Pay" << endl;
+   
+   
+   cout << userA.user_name << endl;                                                                                                              // format and print output
+   cout << "Income          Rate          Hours         Gross Total         Deductions         Reimbursements          Total Pay" << endl; 
    cout << "Gross Wages     $" << userA.hourly_pay << "          " << userA.hours_worked << "              $" << userA.gross_pay <<
            "              $" << userA.taxes + userA.insurance_cost << "              $" << userA.mileage_reimbursment << "          $" << userA.net_pay;
  }
