@@ -8,13 +8,15 @@
 using namespace std;
 
 /*
-The purpose of this function is to take a 
+The purpose of this function is to take a inputed pound value and converting it into kilograms
 */
 double PoundsToKilos (double lbs_in)
 {
     double kilo_out = lbs_in * 2.2046226218;
     return kilo_out;
 }
+
+// This function grabs a kilo value and converts it into a lb value
 
 double KilosToPounds (double kilos_in)
 {
@@ -43,16 +45,16 @@ int RandGenerator(int min_random, int max_random)
 {
     Swap(min_random, max_random);
     srand(time(0));                                                                               //Seed in time
-    int generated_number = rand() % ( max_random - min_random + 1 ) + max_random ;                //Generating a random number 
+    int generated_number = rand() % ( max_random - min_random + 1 ) + max_random ;                //Generating a random number for lbs later
     cout << "Your random number is "<< generated_number << endl;
-    return generated_number;
+    return generated_number;                                                                      //Assign the value to the generated nuumber variable
                                                                                               
 }
 
 
-int main()                                                                                        //Running the function
+int main()                                                                                        //Running the main function refering back to my user defined function
 {
-    int minimum_rand;
+    int minimum_rand;                                                                             //Initiate values
     int maximum_rand;
                                                                                                  
     cout << "Please input you random number minimum value: " << endl;
@@ -66,7 +68,7 @@ int main()                                                                      
     
     cout << "Your initial random weight in lbs is: " << initial_lbs << endl;
     cout << "Converted to Kilos is: " << initial_kilos << endl;
-    cout << "Converted back to lbs: " << lbs_again;
+    cout << "Converted back to lbs: " << lbs_again;                                             //output
     
     return 0;
 }
