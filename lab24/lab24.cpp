@@ -38,7 +38,7 @@ int Swap(int& min_random, int& max_random)
 }
 
 /*
-This function calls a random number between two numbers later inputed by the user
+This function calls a random number between two numbers later inputed by the user and seeds that random number in time so that it is more unpredictable
 */
 
 int RandGenerator(int min_random, int max_random)                                               
@@ -62,7 +62,7 @@ int main()                                                                      
     cout << "Please input your random number maximum value: " << endl;
     cin >> maximum_rand;
     
-    double initial_lbs = RandGenerator(minimum_rand, maximum_rand);
+    double initial_lbs = RandGenerator(minimum_rand, maximum_rand);                              //Asigns variables to the return of the functions so that the can be pluigged into the other functions
     double initial_kilos = PoundsToKilos(initial_lbs);
     double lbs_again = KilosToPounds(initial_kilos);
     
