@@ -173,8 +173,8 @@ int main (){
     winner.setTime(plchldr_win);
     winner.setTime(plchldr_win_sec);
 	
-	user_fps = (plchldr_miles / plchldr_time) * 88;                             // 1 mile per min = 88 feet per second
-	user_mps = (plchldr_miles / plchldr_time) * 26.8224;                        // 1 mile per min = 26.8224 meters per second
+	user_fps = (plchldr_miles / (((plchldr_time * 60) + plchldr_secs) / 60)) * 88;                             // 1 mile per min = 88 feet per second
+	user_mps = (plchldr_miles / (((plchldr_time * 60) + plchldr_secs) / 60)) * 26.8224;                        // 1 mile per min = 26.8224 meters per second
 	mile_time = ( (plchldr_time * 60) + plchldr_secs );
 	
 	min_split = ((( mile_time / plchldr_miles) / 60 ) / 4);                     //mile time / 4 = 1/4 mile splits
