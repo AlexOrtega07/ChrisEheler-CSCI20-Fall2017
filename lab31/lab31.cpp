@@ -10,7 +10,7 @@ int main(){
     int num_phones = 0;
     int num_data = 0;
     int num_tablets = 0;
-    int phone_total = 0;
+    int ATT_UCP_total = 0;
     
     cout << "Please enter the total number of phones in the plan: " << endl;
     cin >> num_phones;
@@ -20,15 +20,15 @@ int main(){
     cin >> num_tablets;
     
     if (num_phones == 1){
-        phone_total = 60 + (num_tablets * 10);
+        ATT_UCP_total = 60 + (num_tablets * 10);
     }
     
     else if (num_phones == 2){
-        phone_total = 115 + (num_tablets * 10);
+        ATT_UCP_total = 115 + (num_tablets * 10);
     }
     
-    else if (num_phones >= 3){
-        phone_total = 115 + (((num_phones - 2) * 20) + (num_tablets * 10));
+    else{
+        ATT_UCP_total = 115 + (((num_phones - 2) * 20) + (num_tablets * 10));
     }
     
     return(0);
