@@ -89,6 +89,18 @@ int main(){
         cout << " You most economical phone plan is the AT&T Family Plan" << endl;
     }
     
+    else if (verizon_unl_total < ATT_UCP_total && verizon_unl_total < ATT_FP_total && verizon_unl_total < sprint_unl_total && verizon_unl_total < sprint_two_total){
+        cout << " Your most economical phone plan is the Verizon Unlimited Plan" << endl;
+    }
+    
+    else if (sprint_unl_total < ATT_UCP_total && sprint_unl_total < ATT_FP_total && sprint_unl_total < verizon_unl_total && sprint_unl_total < sprint_two_total){
+        cout << "Your most economical phone plan is the Sprint unlimited PLan" << endl;
+    }
+    
+    else {
+        cout << "Your most economical phone plan is the Sprint 2GB Plan " << endl;
+    }
+    
     cout << ATT_UCP_total << "  " << ATT_FP_total << "  " << verizon_unl_total << "  " << sprint_unl_total << "  " << sprint_two_total;
     
     return(0);
