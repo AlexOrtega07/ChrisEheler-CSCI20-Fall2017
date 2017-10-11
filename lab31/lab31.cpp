@@ -8,6 +8,8 @@ using namespace std;
 
 int main(){
     int num_phones = 0;
+    int num_dumb = 0;
+    int num_smart = 0;
     int num_data = 0;
     int num_tablets = 0;
     int ATT_UCP_total = 0;
@@ -16,8 +18,11 @@ int main(){
     int sprint_unl_total = 0;
     int sprint_two_total = 0;
     
-    cout << "Please enter the total number of phones in the plan: " << endl;
-    cin >> num_phones;
+    cout << "Please enter the total number of smart phones in the plan: " << endl;
+    cin >> num_smart;
+    cout << "Please enter the total number of dumb phones in the plan: " << endl;
+    cin >> num_dumb;
+    num_phones = num_smart + num_dumb;
     cout << "Please enter the ammount of data in gigabytes needed: " << endl;
     cin >> num_data;
     cout << "How many tablets are you planning to have on your plan? " << endl;
@@ -35,7 +40,11 @@ int main(){
         ATT_UCP_total = 115 + ( ( ( num_phones - 2 ) * 20) + ( num_tablets * 10 ) );
     }
     
-    if (num_data == 1) {
+     if (num_phones > 10) {
+        ATT_FP_total = 999999999;
+    }
+    
+    else if (num_data == 1) {
         ATT_FP_total = ( num_phones * 20 ) + ( num_tablets *10 ) + 30;
     }
     
@@ -55,8 +64,13 @@ int main(){
         ATT_FP_total = ( num_phones * 20 ) + ( num_tablets *10 ) + 90;
     }
     
-    else {
+    else if (num_data <= 25) {
         ATT_FP_total = ( num_phones * 20 ) + ( num_tablets *10 ) + 110;
+    }
+    
+    
+    else{
+        ATT_FP_total = 999999999;
     }
     
     if (num_phones == 1){
@@ -79,10 +93,16 @@ int main(){
         sprint_unl_total = 100 + ( (num_phones - 2) * 30 );
     }
     
-    sprint_two_total = 40 * num_phones;
+    if ( num_data <= 2){
+    sprint_two_total = 40 * (num_phones + num_tablets); 
+    }
+    
+    else {
+        sprint_two_total = 999999999;
+    }
     
     if (ATT_UCP_total < ATT_FP_total && ATT_UCP_total < verizon_unl_total && ATT_UCP_total < sprint_unl_total && ATT_UCP_total < sprint_two_total){
-        cout << " Your most economical phone plan is the AT&T Unlimited C Plan" << endl;
+        cout << " Your most economical phone plan is the AT&T Unlimited Choice Plan" << endl;
     }
     
     else if (ATT_FP_total < ATT_UCP_total && ATT_FP_total <verizon_unl_total &&  ATT_FP_total < sprint_unl_total && ATT_FP_total < sprint_two_total){
@@ -101,7 +121,9 @@ int main(){
         cout << "Your most economical phone plan is the Sprint 2GB Plan " << endl;
     }
     
-    cout << ATT_UCP_total << "  " << ATT_FP_total << "  " << verizon_unl_total << "  " << sprint_unl_total << "  " << sprint_two_total;
+    if (ATT_UCP_total == ATT_FP_total && ATT_FP_total == verizon_unl_total && verizon_unl_total == sprint_unl_total && sprint_unl_total == sprint_two_total){
+        cout << "There is no phone coverage that is supperior to another with the information you have provided " << endl;
+    }
     
     return(0);
 }
