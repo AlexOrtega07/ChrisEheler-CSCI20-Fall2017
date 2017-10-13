@@ -102,15 +102,15 @@ int main(){
     }
     
     if (ATT_UCP_total < ATT_FP_total && ATT_UCP_total < verizon_unl_total && ATT_UCP_total < sprint_unl_total && ATT_UCP_total < sprint_two_total){               // Usinf boolean to determin and output the best option
-        cout << " Your most economical phone plan is the AT&T Unlimited Choice Plan" << endl;
+        cout << "Your most economical phone plan is the AT&T Unlimited Choice Plan" << endl;
     }
     
     else if (ATT_FP_total < ATT_UCP_total && ATT_FP_total <verizon_unl_total &&  ATT_FP_total < sprint_unl_total && ATT_FP_total < sprint_two_total){
-        cout << " You most economical phone plan is the AT&T Family Plan" << endl;
+        cout << "Your most economical phone plan is the AT&T Family Plan" << endl;
     }
     
     else if (verizon_unl_total < ATT_UCP_total && verizon_unl_total < ATT_FP_total && verizon_unl_total < sprint_unl_total && verizon_unl_total < sprint_two_total){
-        cout << " Your most economical phone plan is the Verizon Unlimited Plan" << endl;
+        cout << "Your most economical phone plan is the Verizon Unlimited Plan" << endl;
     }
     
     else if (sprint_unl_total < ATT_UCP_total && sprint_unl_total < ATT_FP_total && sprint_unl_total < verizon_unl_total && sprint_unl_total < sprint_two_total){
