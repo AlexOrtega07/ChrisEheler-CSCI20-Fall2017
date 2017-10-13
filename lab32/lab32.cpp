@@ -2,21 +2,21 @@
 //Created On : 10/10/2017
 //This program will take user input and determines which that
 
-#include <iostream>
+#include <iostream>                                                             // All the necessary includes
 #include <string>
 #include <cmath>
 using namespace std;
 
 int main() {
     
-    string user_name = "You didnt enter a users name";
+    string user_name = "You didnt enter a users name";                          // Defining and initializing all the values
     string user_name_last = "fool!";
     string m = "a";
     double adjusted_income = 0;
     double withheld_tax = 0;
     double tax = 0;
     
-    cout << "Please enter your first name: " << endl;
+    cout << "Please enter your first name: " << endl;                           // Gathering user input
     cin >> user_name;
     cout << "Please enter your last name: " << endl;
     cin >> user_name_last;
@@ -27,13 +27,13 @@ int main() {
     cout << "Please enter the amount you have withheld for taxes:" << endl;
     cin >> withheld_tax;
     
-     switch ('m') {
+     switch ('m') {                                                             // Can only use switch for the marital status due to doubles being unusable
         case 'm':
         if (adjusted_income <= 18650){
             tax = adjusted_income * .10;
         }
         
-        else if (adjusted_income <= 75900){
+        else if (adjusted_income <= 75900){                                     // Input all of the calculations for the married taxes in for of in else statements
             tax = 1865 + ((adjusted_income - 18650) * .15);
         } 
         
@@ -53,9 +53,9 @@ int main() {
             tax = 112728 + ((adjusted_income - 470700) * .396);
         }
         
-        break;
+        break;                                                                  // have to have the break
         
-        case 's':
+        case 's':                                                               // repeating the above for the single taxpayer 
         
         if (adjusted_income <= 9325){
             tax = adjusted_income * .10;
@@ -91,14 +91,14 @@ int main() {
             break;
     }
     
-    double tax_refund = withheld_tax - tax;
+    double tax_refund = withheld_tax - tax;                                     // Do the math to determine tax refund that none of them get
     cout << " " << endl << " " << endl;
     cout << "Name: " << user_name << " " << user_name_last << endl;
     cout << "Total Gross Adjusted Income: $" << adjusted_income << endl;
     cout << "Total Tax owed: $" << tax << endl;
     
     if (tax_refund >= 0){
-    cout << user_name << " " << user_name_last << " is entitled to a refund of: $" << tax_refund << endl;
+    cout << user_name << " " << user_name_last << " is entitled to a refund of: $" << tax_refund << endl;       // Make an if else for getting a refund or owing money
     }
     
     else{
