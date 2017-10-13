@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -95,7 +96,61 @@ int main() {
     cout << "Name: " << user_name << " " << user_name_last << endl;
     cout << "Total Gross Adjusted Income: $" << adjusted_income << endl;
     cout << "Total Tax owed: $" << tax << endl;
-    cout << user_name << " " << user_name_last << " is entitled to a refund of: $" << tax_refund << endl;
     
+    if (tax_refund >= 0){
+    cout << user_name << " " << user_name_last << " is entitled to a refund of: $" << tax_refund << endl;
+    }
+    
+    else{
+        cout << user_name << " " << user_name_last << " owes the IRS: $" << abs(tax_refund) << endl;
+    }
     return(0);
 }
+
+/*
+Name: Joe Vandal
+Total Gross Adjusted Income: $12100
+Total Tax owed: $1210
+Joe Vandal is entitled to a refund of: $-960
+----------------------------------------------------
+Name: Alfonso Haynes
+Total Gross Adjusted Income: $32351
+Total Tax owed: $3920.15
+Alfonso Haynes is entitled to a refund of: $-728.15
+-----------------------------------------------------
+Name: Bridget Rowe
+Total Gross Adjusted Income: $88229
+Total Tax owed: $13534.8
+Bridget Rowe is entitled to a refund of: $-1477.75
+-----------------------------------------------------
+Name: Wendy Joseph
+Total Gross Adjusted Income: $73291
+Total Tax owed: $10061.1
+Wendy Joseph is entitled to a refund of: $-3089.15
+-----------------------------------------------------
+
+These people need to get an accountant!
+
+AFTER ADJUSTING TO NOT HAVE NEGATIVE REFUNDS BECAUSE THAT IS MEAN 
+
+Name: Joe Vandal
+Total Gross Adjusted Income: $12100
+Total Tax owed: $1210
+Joe Vandal owes the IRS: $960
+------------------------------------------------------
+Name: Alfonso Haynes
+Total Gross Adjusted Income: $32351
+Total Tax owed: $3920.15
+Alfonso Haynes owes the IRS: $728.15
+------------------------------------------------------
+Name: Bridget Rowe
+Total Gross Adjusted Income: $88229
+Total Tax owed: $13534.8
+Bridget Rowe owes the IRS: $1477.75
+------------------------------------------------------
+Name: Wendy Joseph
+Total Gross Adjusted Income: $73291
+Total Tax owed: $10061.1
+Wendy Joseph owes the IRS: $3089.15
+
+*/
