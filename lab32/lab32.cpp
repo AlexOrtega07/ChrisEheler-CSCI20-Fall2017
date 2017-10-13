@@ -90,10 +90,12 @@ int main() {
             break;
     }
     
-    
+    double tax_refund = withheld_tax - tax;
+    cout << " " << endl << " " << endl;
     cout << "Name: " << user_name << " " << user_name_last << endl;
     cout << "Total Gross Adjusted Income: $" << adjusted_income << endl;
     cout << "Total Tax owed: $" << tax << endl;
+    cout << user_name << " " << user_name_last << " is entitled to a refund of: $" << tax_refund << endl;
     
     return(0);
 }
