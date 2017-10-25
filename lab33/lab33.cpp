@@ -41,7 +41,7 @@ int main() {
     
     if (winning_num == numb_guess) {
         cout << "Congratualtions you got it right!" << endl;                    // Congratulate the victor
-        break;
+        
     }
     }
 
