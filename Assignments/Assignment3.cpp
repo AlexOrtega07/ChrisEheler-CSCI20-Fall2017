@@ -6,19 +6,22 @@
 #include <ctime>
 using namespace std;
 
-class Computer{
+class Computer{                                                                 // Computer class to hold the data for the computer
     public:
     void setCherries(int cher_in);
     void setBasket(int bask_in);
     int getCherries();
     int getBasket();
     
-    private:
+    private:                                                                    // Private variable for the cherries on the tree and 
     int comp_cherries;
     int comp_basket;
     
 };
 
+/*
+
+*/
 void Computer::setCherries(int cher_in){
     comp_cherries = cher_in;
 }
@@ -43,14 +46,10 @@ int main(){
     int tree_cherries;
     int basket = 0;
     int spin = 7;
-    int turns = 0;
-    comp.setBasket(0);
-    
-    
+    int turns = 0; 
     starting_cherries = rand() % 10 +1;
     tree_cherries = starting_cherries;
     comp.setCherries(starting_cherries);
-    cout << tree_cherries << endl;
     
     while (tree_cherries >= 1 && comp.getCherries() >=1){
         if ( turns % 2 == 0 ){
@@ -102,8 +101,9 @@ int main(){
                 tree_cherries = starting_cherries;
                 basket = 0;
             } 
+            turns++;
         } 
-        else if (turns % 2 == 1){
+        else if (turns % 2 == 1){                                               // 
             cout << "It is the computers turn." << endl;
             srand(time(0));
             spin = rand() % 7 + 1;
@@ -153,39 +153,17 @@ int main(){
                 comp.setCherries(starting_cherries);
                 comp.setBasket(0);
             } 
+            turns++;
         } 
         
     } 
-    turns++;
     
-    if (tree_cherries <=0){
+    
+    if (tree_cherries <=0){                                                     // Announce the winner
         cout << "Hi Ho Cherry-O! You Won!";
     }
-    else{
-        cout << "Better lueck next time you lost!";
+    if (comp.getCherries() <= 0){
+        cout << "Better luck next time you lost!";
     }
-    return(0);
+    return(0); 
 }
-
-/*Each player starts the game with an empty basket and 10 cherries on his/her tree. Players take turns spinning the spinner and performing the indicated action. The spinner is divided into seven sections:
-
-Take one cherry from tree
-Take two cherries from tree
-Take three cherries from tree
-Take four cherries from tree
-Dog: Replace cherries on tree: two if the player has at least that many in his/her basket, one if he/she has only one (no effect if player's basket is empty)
-Bird: Same as dog
-Spilled basket: Replace all cherries on tree
-The first player to collect all the cherries from his/her tree and call "Hi Ho! Cherry-O" wins the game.
-
-Analysis[edit]
-The game length can be determined using a Markov chain, yielding the following results:[3]
-
-Minimum game length: 3
-Average game length: 15.8
-Maximum game length: Unbounded
-25th percentile: 7 moves
-50th percentile (median): 12 moves
-75th percentile: 21 moves
-95th percentile: 40 moves
-*/
