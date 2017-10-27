@@ -20,20 +20,30 @@ class Computer{                                                                 
 };
 
 /*
-
+Takes input and assigns it to the private value of comp_cherries
 */
 void Computer::setCherries(int cher_in){
     comp_cherries = cher_in;
 }
 
+/*
+Takes input and assigns it to the private value of comp_basket
+*/
 void Computer::setBasket(int bask_in){
     comp_basket = bask_in;
 }
 
+/*
+Takes private value for cherries inserts them into the code
+*/
 
 int Computer::getCherries(){
     return comp_cherries;
 }
+
+/*
+Takes private value for basket inserts them into the code
+*/
 
 int Computer::getBasket(){
     return comp_basket;
@@ -41,17 +51,17 @@ int Computer::getBasket(){
 
 
 int main(){
-    Computer comp;
+    Computer comp;                                                              // Creating the object that is the oponent
     int starting_cherries;
     int tree_cherries;
     int basket = 0;
     int spin = 7;
     int turns = 0; 
-    starting_cherries = rand() % 10 +1;
+    starting_cherries = rand() % 10 +1;                                         // Seeding in random for the spinner
     tree_cherries = starting_cherries;
     comp.setCherries(starting_cherries);
     
-    while (tree_cherries >= 1 && comp.getCherries() >=1){
+    while (tree_cherries >= 1 && comp.getCherries() >=1){                       // loop that controls turns and the spinner
         if ( turns % 2 == 0 ){
             cout << "It is the players turn." << endl;
             srand(time(0));
@@ -103,7 +113,7 @@ int main(){
             } 
             turns++;
         } 
-        else if (turns % 2 == 1){                                               // 
+        else if (turns % 2 == 1){                                               // Computer turn 
             cout << "It is the computers turn." << endl;
             srand(time(0));
             spin = rand() % 7 + 1;
@@ -167,3 +177,680 @@ int main(){
     }
     return(0); 
 }
+/*
+Running /home/ubuntu/workspace/Assignments/Assignment3.cpp
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+Hi Ho Cherry-O! You Won!
+--------------------------------------------------------------------------------
+Running /home/ubuntu/workspace/Assignments/Assignment3.cpp
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+Hi Ho Cherry-O! You Won!
+--------------------------------------------------------------------------------
+Running /home/ubuntu/workspace/Assignments/Assignment3.cpp
+It is the players turn.
+Hi Ho Cherry-O! You Won!
+
+Process exited with code: 0
+--------------------------------------------------------------------------------
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+It is the players turn.
+It is the computers turn.
+Better luck next time you lost!
+--------------------------------------------------------------------------------
+*/
