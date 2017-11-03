@@ -12,12 +12,20 @@ class Computer{                                                                 
     void setBasket(int bask_in);
     int getCherries();
     int getBasket();
+    Computer();
     
     private:                                                                    // Private variable for the cherries on the tree and 
     int comp_cherries;
     int comp_basket;
     
 };
+/*
+This is the constructor function that is used as soon as an object is made to store default valuies in this case 0's
+*/
+Computer::Computer(){
+    comp_cherries = 0;
+    comp_basket = 0;
+}
 
 /*
 Takes input and assigns it to the private value of comp_cherries
@@ -51,7 +59,7 @@ int Computer::getBasket(){
 
 
 int main(){
-    Computer comp;                                                              // Creating the object that is the oponent
+    Computer comp;                                                              // Creating the object that is the opponent Using the class made prior
     int starting_cherries;
     int tree_cherries;
     int basket = 0;
@@ -63,10 +71,10 @@ int main(){
     
     while (tree_cherries >= 1 && comp.getCherries() >=1){                       // loop that controls turns and the spinner
         if ( turns % 2 == 0 ){
-            cout << "It is the players turn." << endl;
+            cout << "It is the players turn." << endl;                          // informs the user of whos turn it is
             srand(time(0));
-            spin = rand() % 7 + 1;
-            if (spin == 1){
+            spin = rand() % 7 + 1;                                              // Generates a random number that is then used as the spinner variable
+            if (spin == 1){                                                     // If then decision tree that establishes what the turn does to the other variables
             tree_cherries = tree_cherries - 1;
             basket = basket +1;
             } 
@@ -87,7 +95,7 @@ int main(){
             } 
     
             else if (spin == 5){
-                if (tree_cherries >= 2){
+                if (tree_cherries >= 2){                                        // This decision depends upon how many tree_cherries you have so a nested if else is used 
                 basket = basket - 2;
                 tree_cherries = tree_cherries + 2;
                 }
@@ -97,7 +105,7 @@ int main(){
                     }
                 } 
     
-            else if (spin == 6){
+            else if (spin == 6){                                                // This decision also depends upon how many tree_cherries you have so a nested if else is used
                 if (tree_cherries >= 2){
                     basket = basket - 2;
                     tree_cherries = tree_cherries + 2;
@@ -108,14 +116,14 @@ int main(){
                     }
             } 
             else {
-                tree_cherries = starting_cherries;
+                tree_cherries = starting_cherries;                              // Rather than making a 7th else if I decided to use else because if it is not a 1-6 it must be a 7
                 basket = 0;
             } 
             turns++;
         } 
         else if (turns % 2 == 1){                                               // Computer turn 
-            cout << "It is the computers turn." << endl;
-            srand(time(0));
+            cout << "It is the computers turn." << endl;                        // Aside from this comment the rest of this decision tree operates exactly the same as the users turn
+            srand(time(0));                                                     // Only it uses sets and gets to store the information into the object made for the computer
             spin = rand() % 7 + 1;
             if (spin == 1){
             comp.setCherries( comp.getCherries() - 1);
@@ -169,7 +177,7 @@ int main(){
     } 
     
     
-    if (tree_cherries <=0){                                                     // Announce the winner
+    if (tree_cherries <=0){                                                     // Announce the winner evaluating the user first as they alsways go first
         cout << "Hi Ho Cherry-O! You Won!";
     }
     if (comp.getCherries() <= 0){

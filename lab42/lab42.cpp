@@ -5,12 +5,12 @@ This program will emulate a shopping cart tracking inventory and price of items 
 whenadding items to your cart the stock number goes down with the number that goes in the cart
 */
 
-#include <iostream>
+#include <iostream>                                                             // Including the proper includes for the program
 #include <string>
 using namespace std;
 
 int main(){
-    double cart_price = 0;
+    double cart_price = 0;                                                      // Initializing the cart as 0 because there arent any items yet
     char shopping = 'y';
     
     
@@ -22,12 +22,27 @@ int main(){
     for ( int i = 0; i < 10; i++ ){
         cout << i + 1 << ". " << stuff[i] << "               $" << prices[i] << endl;
     }
+    cout << " " << endl;
+    cout << " " << endl;
+    
     
     while ( shopping == 'Y' || shopping == 'y'){
+        int temp_item = 0;
+        
+        cout << "Please select an item number that you would like to purchase: ";
+        cin >> temp_item;
+        if (stock[temp_item - 1] <= 0){
+            cout << "I am sorry we are out of stock please select a different item: ";
+            cin >> temp_item;
+        }
+        stock [temp_item - 1] = stock[temp_item - 1] - 1;
+        cart_price = cart_price + prices[temp_item - 1];
         
         cout << "Would you like to continue shopping? (y/n): ";
         cin >> shopping;
     }
+
+cout << "Your order totals: $" << cart_price;
 
     return(0);
 }
