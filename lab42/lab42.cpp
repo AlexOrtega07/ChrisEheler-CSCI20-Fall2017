@@ -14,7 +14,8 @@ int main(){
     char shopping = 'y';
     
     
-    string stuff[10] = { "Glock 17        ", "Glock 19        ", "Glock 20        ", "Glock 21        ", "Glock 22        ", "Gock 23         ", "M&P 9mm Pro     ", "Springfield 1911",
+    string stuff[10] = { "Glock 17        ", "Glock 19        ", "Glock 20        ", "Glock 21        "
+    , "Glock 22        ", "Gock 23         ", "M&P 9mm Pro     ", "Springfield 1911",
     "X-D Sub-Compact ", "Bulldog .44 Mag"};
     double prices[10] = { 499.99, 549.99, 589.99, 599.99, 559.95, 479.99, 574.00, 899.99, 429.99, 443.00};
     int stock[10] = {5, 5, 5, 5, 5, 5, 6, 3, 8, 4};
