@@ -92,7 +92,7 @@ int ArrayTools::Search(int num) {
 
 bool ArrayTools::Is_sorted() {
     int num_order = 0;
-    
+     
     for (int i = 0; i < size; i++) {
         if (i == 0) {
             num_order++;
@@ -102,9 +102,9 @@ bool ArrayTools::Is_sorted() {
     }
     
     if (num_order == size) {
-        cout << "Yes";
+        cout << " Yes ";
     } else {
-        cout << "No";
+        cout << " No ";
     }
 }
 
