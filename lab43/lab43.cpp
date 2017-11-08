@@ -55,6 +55,18 @@ void Guns::SetPrice( double price){
     price_ = price;
 }
 
+string Guns::GetName(){
+    return guns_;
+}
+
+int Guns::GetInventory(){
+    return inventory_;
+}
+
+double Guns::GetPrice(){
+    return price_;
+}
+
 int main(){
     
     cout << "Yay No Bugs!!";
