@@ -26,11 +26,8 @@ int main(){
     }
     
     if (strcmp(first_name, last_name) == 0) {                                   // If the two names are the same it wans the user and gives another chance in case their names are actually the same
-        cout << "Your last name and first name are the same, please restart the program if this is an error." << endl;
-        cout << "Please enter your first name (Up to 10 Letters): ";
-        cin >> first_name;
-        cout<< endl << "Please enter your last name (Up to 20 Letters): ";
-        cin >> last_name ;
+        cout<< endl << "            Warning:: You have entered the same name for your first and last" << endl;
+        cout << "            If this was done in error please restart the program" << endl;
         
     }
     cout << endl;
