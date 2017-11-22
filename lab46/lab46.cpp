@@ -62,12 +62,8 @@ int main(){
     
     GPA = grade_points / classes;
     
-    cout << student << endl;
-    cout << classes << endl;
-    cout << grades[0] << endl;
-    cout << grade_points<< endl;
-    cout << GPA << endl;
-
+    outFS << "<h2> " << student << " has taken " << classes << " classes this semester </h2>" << endl;
+    outFS << "<p1> your total GPA for this semster was " << GPA << endl;
     outFS << "</body>" << endl;
     outFS << "</html>" << endl;
     
