@@ -1,0 +1,24 @@
+Christian Smith
+Incorrect answers: 9
+Resulting in a grade of 10.75 out of 18 or a 59.7222%
+
+Paxton Jones
+Incorrect answers: 10
+Resulting in a grade of 13.5 out of 18 or a 75%
+
+Abby Sciuto
+Incorrect answers: 8
+Resulting in a grade of 13 out of 18 or a 72.2222%
+
+Audrey Smithson
+Incorrect answers: 11
+Resulting in a grade of 10.25 out of 18 or a 56.9444%
+
+Katie Holmes
+Incorrect answers: 10
+Resulting in a grade of 12.5 out of 18 or a 69.4444%
+
+Carrie Grant
+Incorrect answers: 8
+Resulting in a grade of 16 out of 18 or a 88.8889%
+

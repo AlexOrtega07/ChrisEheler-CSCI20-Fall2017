@@ -20,7 +20,7 @@ int main(){
     double GPA = 0.0;
     
     inFS.open("input.txt");
-    
+    outFS.open("output.html");
     if (inFS.is_open()){
        cout << "Text file has been imported" << endl;
     }
@@ -63,10 +63,10 @@ int main(){
     GPA = grade_points / classes;
     
     outFS << "<h2> " << student << " has taken " << classes << " classes this semester </h2>" << endl;
-    outFS << "<p1> your total GPA for this semster was " << GPA << endl;
+    outFS << "<p1> your total GPA for this semster was " << GPA << " </p1>" << endl;
     outFS << "</body>" << endl;
     outFS << "</html>" << endl;
-    
+    outFS.close();
     inFS.close();
     if (!inFS.is_open()){
         cout << "Input file closed";
