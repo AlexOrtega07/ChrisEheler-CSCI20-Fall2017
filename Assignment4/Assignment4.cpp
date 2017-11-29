@@ -16,6 +16,7 @@
 #include <chrono>
 using namespace std;
 
+
 int main(){
     string student_name;                                                        // Declare and define necessary variables arrays and streams
     string student_last_name;
@@ -146,7 +147,7 @@ int main(){
     if (!output.is_open()){
         cout << "System has outputed a file into the directory" << endl;
     }
-    
+  
     
     return 0;
 }
