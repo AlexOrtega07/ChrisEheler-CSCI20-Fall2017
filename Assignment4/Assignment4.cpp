@@ -16,6 +16,24 @@
 #include <chrono>
 using namespace std;
 
+class NonChar {
+    public:
+    void setAns1(string word);
+    void setAns2(string word);
+    void setAns3(string word);
+    string getAns1();
+    string getAns2();
+    string getAns3();
+    
+    private:
+    string ans1;
+    string ans2;
+    string ans3;
+};
+
+void setAns1(string word){
+    ans1 = word;
+    }
 
 int main(){
     string student_name;                                                        // Declare and define necessary variables arrays and streams
